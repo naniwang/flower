@@ -1,0 +1,18 @@
+.fenlei{
+	height: 150px;
+	padding: 15px 0;
+}
+.fenlei ul{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.fenlei ul li a{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.fenlei ul li p{
+	margin-top: 10px;
+}

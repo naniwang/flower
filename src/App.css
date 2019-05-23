@@ -49,3 +49,9 @@ section{
 	background: #fff;
 	font-size: 14px;
 }
+.foot a{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}

@@ -30,7 +30,7 @@ class Detail extends React.Component{
 				</header>
 				<section></section>
 				<footer>
-				
+					<button></button>
 				</footer>
 			</div>
 		)

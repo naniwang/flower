@@ -30,7 +30,7 @@ class flowerList extends React.Component{
 				<h4 style={styleComponent.h4}>鲜花分类</h4>
 			</header>
 			<section></section>
-			<footer className="foot">
+			<footer>
 				<Foot/>
 			</footer>
 			</div>

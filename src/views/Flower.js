@@ -1,6 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 import { Icon, Grid } from 'antd-mobile';
+import Foot from "../components/Foot";
 
 class Flower extends React.Component{
 	constructor(props){
@@ -35,11 +36,8 @@ class Flower extends React.Component{
 					<h4 style={styleComponent.h4}>全部分类</h4>
 				</header>
 				<section></section>
-				<footer className="foot">
-					<NavLink to="/home" className="col">首页</NavLink>
-					<NavLink to="/flower" className="col">鲜花分类</NavLink>
-					<NavLink to="/cart" className="col">购物车</NavLink>
-					<NavLink to="/personal" className="col">个人中心</NavLink>
+				<footer>
+					<Foot/>
 				</footer>
 			</div>
 		)

@@ -6,6 +6,7 @@ import flower from "../img/flower.png";
 import plant from "../img/plant.png";
 import more from "../img/more.png";
 import home from "../css/Home.module.css";
+import Foot from "../components/Foot";
 
 class Home extends React.Component{
 	constructor(props){
@@ -112,11 +113,8 @@ class Home extends React.Component{
 			      		</ul>
 			      	</div>
 				</section>
-				<footer className="foot">
-					<NavLink to="/home" className="col">首页</NavLink>
-					<NavLink to="/flower" className="col">鲜花分类</NavLink>
-					<NavLink to="/cart" className="col">购物车</NavLink>
-					<NavLink to="/personal" className="col">个人中心</NavLink>
+				<footer>
+					<Foot/>
 				</footer>
 			</div>
 		)

@@ -9,11 +9,13 @@ import flowerList from "./views/flowerList";
 import liheList from "./views/liheList";
 import yshList from "./views/yshList";
 import plantList from "./views/plantList";
-import Login from "../src/views/login";
-import Register from "../src/views/register";
-import phoneLogin from "../src/views/phoneLogin";
-import forgetPassword from "../src/views/forgetpassword";
-import Detail from "../src/views/Detail";
+import Login from "./views/login";
+import Register from "./views/register";
+import phoneLogin from "./views/phoneLogin";
+import forgetPassword from "./views/forgetpassword";
+import Detail from "./views/Detail";
+import Order from "./views/Order";
+
 function App() {
   return (
     <div className="App">
@@ -29,6 +31,7 @@ function App() {
 		    		<Route path="/yshList" component={yshList}></Route>
 		    		<Route path="/plantList" component={plantList}></Route>
 		    		<Route path="/detail/:id" component={Detail}></Route>
+		    		<Route path="/order/:id" component={Order}></Route>
 						{/* 登陆注册路由 */}
 						<Route path="/login" component={Login}/>
             <Route path="/register" component={Register}/>

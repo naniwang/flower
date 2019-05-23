@@ -1,6 +1,7 @@
 .fenlei{
-	height: 150px;
+	height: 80px;
 	padding: 15px 0;
+	border-bottom: 1px solid #e2e2e2;
 }
 .fenlei ul{
 	display: flex;
@@ -12,7 +13,28 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	color: #333;
 }
 .fenlei ul li p{
 	margin-top: 10px;
+}
+.choose div{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	border-bottom: 1px solid #e2e2e2;
+	padding: 20px 0;
+}
+.choose div dl{
+	display: flex;
+}
+.choose div dl dd{
+	width: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 20px;
+}
+.choose div dl dd a{
+	margin: 10px 5px;
+	color: #333;
 }

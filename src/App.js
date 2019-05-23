@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import {Route,HashRouter as Router,Switch,Redirect} from "react-router-dom";
 import 'antd-mobile/lib/date-picker/style/css';
+import DatePicker from 'antd-mobile/lib/date-picker';  // 加载 JS
 import Home from "./views/Home";
 import Flower from "./views/Flower";
 import Cart from "./views/Cart";

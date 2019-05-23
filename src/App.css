@@ -16,19 +16,11 @@ html,body,#root,.App,.container{
 	width: 100vw;
 	height: 100vh;
 	background: #fff;
-}
-.container{
 	display: flex;
 	flex-direction: column;
 }
-.foot{
-	height: 45px;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	border-top: 1px solid #e2e2e2;
-	background: #fff;
-	font-size: 14px;
+.container{
+	
 }
 .col{
 	color: #666;
@@ -38,6 +30,7 @@ html,body,#root,.App,.container{
 }
 header,footer{
 	height: 45px;
+	flex-shrink: 0;
 }
 header{
 	background: rgba(255,0,0,0.8);
@@ -47,4 +40,12 @@ section{
 	flex: 1;
 	overflow: auto;
 }
-
+.foot{
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	border-top: 1px solid #ccc;
+	background: #fff;
+	font-size: 14px;
+}

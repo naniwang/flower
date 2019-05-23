@@ -5,6 +5,10 @@ import $ from "jquery";
 import flower from "../img/flower.png";
 import plant from "../img/plant.png";
 import more from "../img/more.png";
+import youyi from "../img/youyi.png";
+import aiqing from "../img/aiqing.png";
+import ganen from "../img/ganen.png";
+import remen from "../img/remen.png";
 import home from "../css/Home.module.css";
 import Foot from "../components/Foot";
 
@@ -111,6 +115,48 @@ class Home extends React.Component{
 			      				</NavLink>
 			      			</li>
 			      		</ul>
+			      	</div>
+			      	<div className={home.choose}>
+			      		<div>
+			      			<dl>
+			      				<dt><NavLink to="/flowerList"><img src={aiqing}/></NavLink></dt>
+			      				<dd>
+			      					<NavLink to="/flowerList">送恋人</NavLink>
+			      					<NavLink to="/flowerList">老婆</NavLink>
+			      					<NavLink to="/flowerList">送女友</NavLink>
+			      					<NavLink to="/flowerList">爱人</NavLink>
+			      				</dd>
+			      			</dl>
+			      			<dl>
+			      				<dt><NavLink to="/flowerList"><img src={youyi}/></NavLink></dt>
+			      				<dd>
+			      					<NavLink to="/flowerList">送恋人</NavLink>
+			      					<NavLink to="/flowerList">老婆</NavLink>
+			      					<NavLink to="/flowerList">送女友</NavLink>
+			      					<NavLink to="/flowerList">爱人</NavLink>
+			      				</dd>
+			      			</dl>
+			      		</div>
+			      		<div>
+			      			<dl>
+			      				<dt><NavLink to="/flowerList"><img src={ganen}/></NavLink></dt>
+			      				<dd>
+			      					<NavLink to="/flowerList">送恋人</NavLink>
+			      					<NavLink to="/flowerList">老婆</NavLink>
+			      					<NavLink to="/flowerList">送女友</NavLink>
+			      					<NavLink to="/flowerList">爱人</NavLink>
+			      				</dd>
+			      			</dl>
+			      			<dl>
+			      				<dt><NavLink to="/flowerList"><img src={remen}/></NavLink></dt>
+			      				<dd>
+			      					<NavLink to="/flowerList">送恋人</NavLink>
+			      					<NavLink to="/flowerList">老婆</NavLink>
+			      					<NavLink to="/flowerList">送女友</NavLink>
+			      					<NavLink to="/flowerList">爱人</NavLink>
+			      				</dd>
+			      			</dl>
+			      		</div>
 			      	</div>
 				</section>
 				<footer>

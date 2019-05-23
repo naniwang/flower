@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.css';
 import {Route,HashRouter as Router,Switch,Redirect} from "react-router-dom";
-import 'antd-mobile/lib/date-picker/style/css';
-import DatePicker from 'antd-mobile/lib/date-picker';  // 加载 JS
 import Home from "./views/Home";
 import Flower from "./views/Flower";
 import Cart from "./views/Cart";
@@ -11,7 +9,11 @@ import flowerList from "./views/flowerList";
 import liheList from "./views/liheList";
 import yshList from "./views/yshList";
 import plantList from "./views/plantList";
-
+import Login from "../src/views/login";
+import Register from "../src/views/register";
+import phoneLogin from "../src/views/phoneLogin";
+import forgetPassword from "../src/views/forgetpassword";
+import Detail from "../src/views/Detail";
 function App() {
   return (
     <div className="App">
@@ -26,6 +28,12 @@ function App() {
 		    		<Route path="/liheList" component={liheList}></Route>
 		    		<Route path="/yshList" component={yshList}></Route>
 		    		<Route path="/plantList" component={plantList}></Route>
+		    		<Route path="/detail/:id" component={Detail}></Route>
+						{/* 登陆注册路由 */}
+						<Route path="/login" component={Login}/>
+            <Route path="/register" component={Register}/>
+            <Route path="/phoneLogin" component={phoneLogin}/>
+            <Route path="/forgetpassword" component={forgetPassword}/>
 		    		<Redirect to="/home"/>
 	    		</Switch>
     		</div>

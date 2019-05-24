@@ -13,18 +13,28 @@ function getCookie(name) {
 	}
 }
 class Foot extends React.Component{
+	constructor(props){
+		super(props)
+		this.state={
+			val:null
+		}
+	}
 	render(){
 		return(
 			<div className="foot">
 				<NavLink to="/home" className="col">首页</NavLink>
 				<NavLink to="/flower" className="col">鲜花分类</NavLink>
 				<NavLink to="/cart" className="col">购物车</NavLink>
-				<NavLink to="/personal" onClick={this.isLogin.bind(this)} className="col">个人中心</NavLink>
+				<NavLink to={this.state.val} className="col">个人中心</NavLink>
 			</div>
 		)
 	}
-	isLogin(){
-		
+	componentWillMount(){
+		if(getCookie('username')== undefined){
+			this.setState({val:"/login"})
+		} else {
+			this.setState({val:"/personal"})
+		}
 	}
 }
 export default Foot;

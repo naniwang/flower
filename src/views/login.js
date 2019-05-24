@@ -43,8 +43,6 @@ function removeCookie(name) {
 }
 
 
-
-
 class Login extends Component{ 
     render(){
         return(
@@ -120,7 +118,7 @@ class Login extends Component{
     login(){
         console.log(this.refs.ph.value)
         setCookie('username',this.refs.ph.value,30)
-        // this.props.history.push("/home")
+        this.props.history.push("/home")
     }
 
     componentDidMount(){

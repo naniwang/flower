@@ -10,10 +10,12 @@ import flowerList from "./views/flowerList";
 import liheList from "./views/liheList";
 import yshList from "./views/yshList";
 import plantList from "./views/plantList";
-import Login from "../src/views/login";
-import Register from "../src/views/register";
-import phoneLogin from "../src/views/phoneLogin";
-import forgetPassword from "../src/views/forgetpassword";
+import Login from "./views/login";
+import Register from "./views/register";
+import phoneLogin from "./views/phoneLogin";
+import forgetPassword from "./views/forgetpassword";
+import Grxx from "./views/grxx"
+import Grzl from "./views/grzl"
 function App() {
   return (
     <div className="App">
@@ -33,6 +35,8 @@ function App() {
             <Route path="/register" component={Register}/>
             <Route path="/phoneLogin" component={phoneLogin}/>
             <Route path="/forgetpassword" component={forgetPassword}/>
+						<Route path="/grxx" component={Grxx}/>
+						<Route path="/grzl" component={Grzl}/>
 		    		<Redirect to="/home"/>
 	    		</Switch>
     		</div>

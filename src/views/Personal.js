@@ -1,7 +1,8 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
-import { Icon, Grid } from 'antd-mobile';
+import { Icon, Grid, Flex, WhiteSpace,} from 'antd-mobile';
 import Foot from "../components/Foot";
+import Img from "../img/11.jpg"
 
 class Personal extends React.Component{
 	back(){
@@ -29,7 +30,17 @@ class Personal extends React.Component{
 					<Icon type="left" color="#fff" style={styleComponent.tubiao} onClick={this.back.bind(this)}/>
 					<h4 style={styleComponent.h4}>个人中心</h4>
 				</header>
-				<section></section>
+				<section> 
+						<Flex>
+							<Flex.Item>
+								<img style={{width:'100%',height:'230px'}} src={Img}/>
+								<div>
+								
+								</div>
+							</Flex.Item> 
+						</Flex>
+						<WhiteSpace size="lg"/> 		
+				</section>
 				<footer>
 					<Foot/>
 				</footer>

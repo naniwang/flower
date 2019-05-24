@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import {Route,HashRouter as Router,Switch,Redirect} from "react-router-dom";
-import 'antd-mobile/lib/date-picker/style/css';
 import Home from "./views/Home";
 import Flower from "./views/Flower";
 import Cart from "./views/Cart";
@@ -16,6 +15,9 @@ import phoneLogin from "./views/phoneLogin";
 import forgetPassword from "./views/forgetpassword";
 import Grxx from "./views/grxx"
 import Grzl from "./views/grzl"
+import Detail from "./views/Detail";
+import Order from "./views/Order";
+
 function App() {
   return (
     <div className="App">
@@ -30,6 +32,8 @@ function App() {
 		    		<Route path="/liheList" component={liheList}></Route>
 		    		<Route path="/yshList" component={yshList}></Route>
 		    		<Route path="/plantList" component={plantList}></Route>
+		    		<Route path="/detail/:id" component={Detail}></Route>
+		    		<Route path="/order/:id" component={Order}></Route>
 						{/* 登陆注册路由 */}
 						<Route path="/login" component={Login}/>
             <Route path="/register" component={Register}/>

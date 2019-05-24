@@ -1,16 +1,15 @@
-.foot{
+.footer{
 	height: 45px;
-	width: 100%;
 	display: flex;
 	align-items: center;
 	padding: 0 10px;
 	border-top: 1px solid #e2e2e2;
 }
-.foot p{
+.footer p{
 	width: 70%;
 	margin-right: 5px;
 }
-.foot button{
+.footer button{
 	width: 25%;
 	height: 45px;
 	border:0 ;
@@ -19,4 +18,47 @@
 	line-height: 45px;
 	color: #fff;
 	border-radius: 5px;
+}
+.ul li{
+	height: 120px;
+	display: flex;
+	align-items: center;
+	border-top: 1px solid #ccc;
+	padding: 0 10px;
+}
+.ul li img{
+	width: 80px;
+	height: 100px;
+	margin-right: 10px;
+	border: 1px solid #ccc;
+}
+.ul li .cen{
+	height: 100px;
+	width: 57%;
+	margin-right: 20px;
+}
+.ul li .cen p{
+	font-size: 14px;
+	color: #333;
+	height: 50px;
+	line-height: 20px;
+}
+.ul li .cen span{
+	color: red;
+}
+.ul li .cen span i{
+	font-style: normal;
+}
+.ulBot{
+	height: 40px;
+	border-top: 1px solid red;
+	border-bottom: 1px solid red;
+	background: pink;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 10px;
+}
+.ulBot a{
+	color: red;
 }

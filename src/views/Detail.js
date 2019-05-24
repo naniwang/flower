@@ -52,7 +52,7 @@ class Detail extends React.Component{
 					<Icon type="left" color="#fff" style={styleComponent.tubiao} onClick={this.back.bind(this)}/>
 					<h4 style={styleComponent.h4}>产品详情</h4>
 				</header>
-				<section>
+				<section className={detail.sec}>
 					<img src={this.state.product.pimg}/>
 					<div className={detail.desc}>
 						<p>{this.state.product.pdesc}</p>

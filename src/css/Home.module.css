@@ -47,13 +47,13 @@
 }
 .list ul li{
 	width: 42%;
-	margin: 10px;
+	margin: 2.1%;
 	border: 1px solid #ccc;
 	padding: 5px;
 }
 .list ul li img{
 	width: 97%;
-	height: 150px;
+	/*height: 150px;*/
 }
 .list ul li p{
 	font-size: 14px;

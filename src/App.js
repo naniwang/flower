@@ -17,7 +17,8 @@ import Grxx from "./views/grxx"
 import Grzl from "./views/grzl"
 import Detail from "./views/Detail";
 import Order from "./views/Order";
-
+import myFlow from "./views/myflow"
+import myFlow1 from "./views/myflow1"
 function App() {
   return (
     <div className="App">
@@ -41,6 +42,8 @@ function App() {
             <Route path="/forgetpassword" component={forgetPassword}/>
 						<Route path="/grxx" component={Grxx}/>
 						<Route path="/grzl" component={Grzl}/>
+						<Route path="/myflow" component={myFlow}/>
+						<Route path="/myflow1" component={myFlow1}/>
 		    		<Redirect to="/home"/>
 	    		</Switch>
     		</div>

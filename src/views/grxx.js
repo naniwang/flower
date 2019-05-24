@@ -28,7 +28,7 @@ var active ={ background:'red',color:"white",height:'54px',marginBottom:"15px"};
                             <span>个人资料管理</span>
                         </WingBlank> 
                     </Link>
-                    <Link to="/" style={{color:"black"}}>
+                    <Link to="/myflow" style={{color:"black"}}>
                         <WingBlank style={{height:"52px",lineHeight:"52px"}}>
                             <span>收花人地址管理</span>
                         </WingBlank>

@@ -26,7 +26,7 @@ class Foot extends React.Component{
 				<NavLink to="/home" className="col"><i className="iconfont icon-index"></i>首页</NavLink>
 				<NavLink to="/flower" className="col"><i className="iconfont icon-icon1"></i>鲜花分类</NavLink>
 				<NavLink to="/cart" className="col"><i className="iconfont icon-chat-gray"></i>购物车</NavLink>
-				<NavLink to="/personal" onClick={this.isLogin} className="col"><i className="iconfont icon-ren"></i>个人中心</NavLink>
+				<NavLink to="/personal" onClick={this.isLogin} to={this.state.val} className="col"><i className="iconfont icon-ren"></i>个人中心</NavLink>
 			</div>
 		)
 	}

@@ -39,10 +39,8 @@ class Flower extends React.Component{
 					<h4 style={styleComponent.h4}>全部分类</h4>
 				</header>
 				<section>
-
-
 					<WingBlank style={{padding:"30px 25px 20px 25px",margin:"0"}}>
-						<Flex>
+						<Flex className={Flo.fenlei}>
 							<Flex.Item>
 								<NavLink to="flowerList">
 									<img src={flower} alt="鲜花"/>
@@ -69,7 +67,6 @@ class Flower extends React.Component{
 							</Flex.Item>
 						</Flex> 
 					</WingBlank>
-
 
 					<WingBlank> 
 							<Flex className={Flo.sp} style={{marginBottom:"15px",borderBottom:"1px solid #cecece"}}>

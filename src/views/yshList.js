@@ -5,7 +5,7 @@ import Foot from "../components/Foot";
 
 class yshList extends React.Component{
 	back(){
-		this.props.history.push('/home');
+		this.props.history.go(-1);
 	}
 	render(){
 		const styleComponent={

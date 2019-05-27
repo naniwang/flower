@@ -1,8 +1,8 @@
-.foot{
+.dibu{
 	display: flex;
 	border-top: 1px solid #ccc;
 }
-.foot button{
+.dibu button{
 	border: 0;
 	height: 45px;
 	text-align: center;
@@ -10,22 +10,22 @@
 	font-size: 14px;
 	background: #fff;
 }
-.foot .collect{
+.dibu .collect{
 	color: #666;
 	border-right: 1px solid #ccc;
 	width: 18%;
 }
-.foot .cart{
+.dibu .cart{
 	color: #666;
 	border-right: 1px solid #ccc;
 	width: 20%;
 }
-.foot .addCart{
+.dibu .addCart{
 	color: #fff;
 	background: orangered;
 	width: 30%;
 }
-.foot .purchas{
+.dibu .purchas{
 	color: #fff;
 	background: red;
 	width: 32%;

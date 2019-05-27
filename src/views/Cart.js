@@ -4,17 +4,34 @@ import $ from "jquery";
 import { Icon, Grid } from 'antd-mobile';
 import Foot from "../components/Foot";
 import cart from "../css/Cart.module.css";
+import { List, Stepper } from 'antd-mobile';
 
 class Cart extends React.Component{
 	constructor(props){
 		super(props)
 		this.state={
-			cartList:[]
+			cartList:[],
+			val: 1,
+			totalPrice:0 //计算商品总价
 		}
 	}
 	back(){
 		this.props.history.push('/home');
 	}
+	//更新购物车商品数量
+	onChange(id,i){
+		var _this=this;
+    	$.ajax({
+    		type:'get',
+    		url:'http://jx.xuzhixiang.top/ap/api/cart-update-num.php',
+    		data:{uid:10741,pid:id,pnum:_this.state.val},
+    		dataType:'json',
+    		success:function(data){
+    			console.log(data)
+    		}
+    	})
+	}
+	
 	render(){
 		const styleComponent={
 			tubiao:{
@@ -50,9 +67,16 @@ class Cart extends React.Component{
 									<img src={item.pimg}/>
 									<div className={cart.cen}>
 										<p>{item.pdesc}</p>
+								          <Stepper
+								            style={{ width: '50%', minWidth: '60px',marginRight:'10px'}}
+								            showNumber
+								            min={1}
+								            value={item.pnum}
+              								onChange={this.onChange.bind(this,item.pid,i)}
+								          />
 										<span><i>￥</i>{item.pprice*item.pnum}</span>
 									</div>
-									<div>X</div>
+									<div onClick={this.del.bind(this,item.pid,i)}>X</div>
 								</li>
 							))
 						}
@@ -64,7 +88,7 @@ class Cart extends React.Component{
 				</section>
 				<footer>
 					<div className={cart.footer}>
-						<p>合计:<strong></strong></p>
+						<p>合计:<strong ref="zong">{this.state.totalPrice}</strong></p>
 						<button>支付</button>
 					</div>
 				</footer>
@@ -73,6 +97,7 @@ class Cart extends React.Component{
 	}
 	componentDidMount(){
 		var _this=this;
+		//购物车商品展示
 		$.ajax({
 			type:"get",
 			url:"http://jx.xuzhixiang.top/ap/api/cart-list.php",
@@ -80,11 +105,35 @@ class Cart extends React.Component{
 			dataType:'json',
 			async:true,
 			success:function(data){
-				console.log(data.data)
+//				console.log(data.data)
 				_this.setState({cartList:data.data})
 			}
-			
 		});
+		/*totalP(){
+			var totalprice=0;
+			var arr=this.state.cartList;
+			arr.map((item,i)=>{
+				totalprice+=item.pprice*item.pnum;
+			})
+			this.setState({totalPrice:totalprice})
+		}
+		this.totalP();*/
+	}
+	//删除
+	del(id,i){
+		var _this=this;
+		$.ajax({
+			type:'get',
+			url:'http://jx.xuzhixiang.top/ap/api/cart-delete.php',
+			data:{uid:10741,pid:id},
+			dataType:'json',
+			success:function(data){
+//				console.log(data)
+				var arr=_this.state.cartList;
+				arr.splice(i,1);
+				_this.setState({cartList:arr})
+			}
+		})
 	}
 }
 export default Cart;

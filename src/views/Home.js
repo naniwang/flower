@@ -42,7 +42,7 @@ class Home extends React.Component{
 			data:{uid:10741},
 			dataType:'json',
 			success:function(data){
-				console.log(data.data)
+//				console.log(data.data)
 				_this.setState({list:data.data})
 			}
 		})

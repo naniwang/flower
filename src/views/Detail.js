@@ -64,7 +64,7 @@ class Detail extends React.Component{
 						<p><strong>鲜花花语: </strong>事业如日中天，恋人亲密无间，薪水成千上万，快乐无际无边，烦恼消散如烟，逍遥胜似神仙。</p>
 					</div>
 				</section>
-				<footer className={detail.foot}>
+				<footer className={detail.dibu}>
 					<button className={detail.collect}>收藏</button>
 					<button className={detail.cart} onClick={this.cart.bind(this)}>购物车</button>
 					<button className={detail.addCart} onClick={this.addCart.bind(this)}>加入购物车</button>

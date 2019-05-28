@@ -27,15 +27,16 @@
 }
 .choose div dl{
 	display: flex;
+	padding-left: 15px;
 }
 .choose div dl dd{
-	width: 100px;
+	width: 50%;
 	display: flex;
 	flex-wrap: wrap;
-	margin-left: 20px;
+	margin-left: 10px;
 }
 .choose div dl dd a{
-	margin: 10px 5px;
+	margin: 10px 3px;
 	color: #333;
 }
 .list{

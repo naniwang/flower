@@ -16,7 +16,7 @@ class Cart extends React.Component{
 		}
 	}
 	back(){
-		this.props.history.push('/home');
+		this.props.history.go(-1);
 	}
 	//更新购物车商品数量
 	onChange(id,i){
@@ -46,6 +46,15 @@ class Cart extends React.Component{
 				lineHeight:'45px',
 				fontSize:'16px',
 				color:'#fff'
+			},
+			jia:{
+				width:"20px",height:"20px",display:"block",float:"left",lineHeight:"20px",textAlign:"center",border:"1px solid #cecece"
+			},
+			jian:{
+				width:"20px",height:"20px",lineHeight:"20px",display:"block",float:"left",textAlign:"center",border:"1px solid #cecece"
+			},
+			num:{
+				width:"40px",height:"20px",float:"left",lineHeight:"20px",textAlign:"center",border:"none",border:"1px solid #cecece"
 			}
 		}
 		return(
@@ -67,13 +76,11 @@ class Cart extends React.Component{
 									<img src={item.pimg}/>
 									<div className={cart.cen}>
 										<p>{item.pdesc}</p>
-								          <Stepper
-								            style={{ width: '50%', minWidth: '60px',marginRight:'10px'}}
-								            showNumber
-								            min={1}
-								            value={item.pnum}
-              								onChange={this.onChange.bind(this,item.pid,i)}
-								          />
+										<div style={{float:"left",marginRight:'10px'}}>
+									        <span style={styleComponent.jian} onClick={(e)=>{this.jian(e,item.id,i)}}>-</span>
+											<input style={styleComponent.num} type="number" value={item.pnum} ref="val" />
+											<span style={styleComponent.jia} onClick={(e)=>{this.add(e,item.pid,i)}}>+</span>
+										</div>
 										<span><i>￥</i>{item.pprice*item.pnum}</span>
 									</div>
 									<div onClick={this.del.bind(this,item.pid,i)}>X</div>
@@ -88,7 +95,7 @@ class Cart extends React.Component{
 				</section>
 				<footer>
 					<div className={cart.footer}>
-						<p>合计:<strong ref="zong">{this.state.totalPrice}</strong></p>
+						<p>合计:￥<strong ref="zong">{this.state.totalPrice}</strong></p>
 						<button>支付</button>
 					</div>
 				</footer>
@@ -107,18 +114,62 @@ class Cart extends React.Component{
 			success:function(data){
 //				console.log(data.data)
 				_this.setState({cartList:data.data})
+				_this.SumPrice()
 			}
 		});
-		/*totalP(){
-			var totalprice=0;
-			var arr=this.state.cartList;
-			arr.map((item,i)=>{
-				totalprice+=item.pprice*item.pnum;
-			})
-			this.setState({totalPrice:totalprice})
-		}
-		this.totalP();*/
 	}
+	//减
+	jian=(e,id,i)=> {
+        this.setState({
+            arr: this.state.cartList.map((ele, index) => {
+                if (index == i) {
+                    if(ele.pnum<=1){
+                        ele.pnum = 1
+                        return ele
+                    }else{
+                        ele.pnum = ele.pnum*1-1
+                        $.ajax({
+                        	type:"get",
+                        	url:"http://jx.xuzhixiang.top/ap/api/cart-update-num.php",
+                        	data:{uid:10741,pid:id,pnum:ele.pnum},
+                        	async:true,
+                        	dataType:'json',
+                        	success:function(data){
+                        		return ele
+                        	}
+                        });
+                    }
+                } else {
+                    return ele
+                }
+            })
+        })
+        this.SumPrice()
+    }
+	//加
+	add=(e,id,i)=>{
+        this.setState({
+            arr:this.state.cartList.map((ele,index)=>{
+                if(index==i){
+                    ele.pnum=ele.pnum*1+1
+                    $.ajax({
+                        	type:"get",
+                        	url:"http://jx.xuzhixiang.top/ap/api/cart-update-num.php",
+                        	data:{uid:10741,pid:id,pnum:ele.pnum},
+                        	async:true,
+                        	dataType:'json',
+                        	success:function(data){
+                        		console.log(ele.pnum)
+                        		return ele
+                        	}
+                        });
+                }else {
+                    return ele
+                }
+            })
+        })
+        this.SumPrice()
+    }
 	//删除
 	del(id,i){
 		var _this=this;
@@ -132,8 +183,19 @@ class Cart extends React.Component{
 				var arr=_this.state.cartList;
 				arr.splice(i,1);
 				_this.setState({cartList:arr})
+				_this.SumPrice()
 			}
 		})
 	}
+	//计算总价
+	 SumPrice=()=>{
+        var sum=0
+        this.state.cartList.forEach((ele,index)=>{
+            sum+=ele.pnum*ele.pprice
+        })
+        this.setState({
+            totalPrice:sum
+        })
+    }
 }
 export default Cart;

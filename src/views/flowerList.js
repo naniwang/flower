@@ -39,20 +39,20 @@ class flowerList extends React.Component{
 			</header>
 			<section>
 				<div className={fList.list}>
-			      		<ul>
-			      			{
-			      				this.state.list.map((item,i)=>(
-			      					<li key={i}>
-				      					<NavLink to={'/detail/'+item.pid}>
-				      						<img src={item.pimg} alt="鲜花"/>
-				      						<p>{item.pdesc}</p>
-				      						<p style={{color:'red'}}>￥{item.pprice}</p>
-			      						</NavLink>
-			      					</li>
-			      				))
-			      			}
-			      		</ul>
-			      	</div>
+		      		<ul>
+		      			{
+		      				this.state.list.map((item,i)=>(
+		      					<li key={i}>
+			      					<NavLink to={'/detail/'+item.pid}>
+			      						<img src={item.pimg} alt="鲜花"/>
+			      						<p>{item.pdesc}</p>
+			      						<p style={{color:'red'}}>￥{item.pprice}</p>
+		      						</NavLink>
+		      					</li>
+		      				))
+		      			}
+		      		</ul>
+		      	</div>
 			</section>
 			<footer>
 				<Foot/>
@@ -69,7 +69,7 @@ class flowerList extends React.Component{
 			dataType:'json',
 			success:function(data){
 //				console.log(data.data)
-				_this.setState({list:data.data})
+				_this.setState({list:data.data.splice(0,4)})
 			}
 		})
   	}

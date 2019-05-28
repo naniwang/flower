@@ -23,12 +23,12 @@ var active ={ background:'red',color:"white",height:'54px',marginBottom:"15px"};
 
             <section>
                 <div style={{width:"100%",height:"105px",borderTop:'1px solid #cecece',borderBottom:'1px solid #cecece',marginBottom:"20px"}}> 
-                    <Link to="/grzl" style={{color:"black"}}>
+                    <Link to="/grzl" style={{color:"#333"}}>
                         <WingBlank style={{height:"52px",lineHeight:"52px",borderBottom:"1px solid #cecece"}}>
                             <span>个人资料管理</span>
                         </WingBlank> 
                     </Link>
-                    <Link to="/myflow" style={{color:"black"}}>
+                    <Link to="/myflow" style={{color:"#333"}}>
                         <WingBlank style={{height:"52px",lineHeight:"52px"}}>
                             <span>收花人地址管理</span>
                         </WingBlank>
@@ -36,17 +36,17 @@ var active ={ background:'red',color:"white",height:'54px',marginBottom:"15px"};
                 </div>
 
                 <div style={{width:"100%",height:"160px",borderTop:'1px solid #cecece',borderBottom:'1px solid #cecece',marginBottom:"20px"}}> 
-                    <Link to="/" style={{color:"black"}}>
+                    <Link to="/" style={{color:"#333"}}>
                         <WingBlank style={{height:"53px",lineHeight:"52px",borderBottom:"1px solid #cecece"}}>
                             <span>修改手机号</span>
                         </WingBlank> 
                     </Link>
-                    <Link to="/" style={{color:"black"}}>
+                    <Link to="/" style={{color:"#333"}}>
                         <WingBlank style={{height:"53px",lineHeight:"52px",borderBottom:"1px solid #cecece"}}>
                             <span>修改密码</span>
                         </WingBlank> 
                     </Link>
-                    <Link to="/" style={{color:"black"}}>    
+                    <Link to="/" style={{color:"#333"}}>    
                         <WingBlank style={{height:"52px",lineHeight:"52px"}}>
                             <span>重置密码(忘记原密码)</span>
                         </WingBlank>
@@ -58,5 +58,4 @@ var active ={ background:'red',color:"white",height:'54px',marginBottom:"15px"};
         )
     }
 }
-
 export default Grxx;

@@ -2,8 +2,16 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 import { Icon, Grid } from 'antd-mobile';
 import Foot from "../components/Foot";
+import $ from "jquery";
+import fList from "../css/flowerList.module.css";
 
 class plantList extends React.Component{
+	constructor(props){
+		super(props)
+		this.state={
+			list:[]
+		}
+	}
 	back(){
 		this.props.history.go(-1);
 	}
@@ -29,12 +37,41 @@ class plantList extends React.Component{
 				<Icon type="left" color="#fff" style={styleComponent.tubiao} onClick={this.back.bind(this)}/>
 				<h4 style={styleComponent.h4}>绿植分类</h4>
 			</header>
-			<section></section>
+			<section>
+				<div className={fList.list}>
+		      		<ul>
+		      			{
+		      				this.state.list.map((item,i)=>(
+		      					<li key={i}>
+			      					<NavLink to={'/detail/'+item.pid}>
+			      						<img src={item.pimg} alt="鲜花"/>
+			      						<p>{item.pdesc}</p>
+			      						<p style={{color:'red'}}>￥{item.pprice}</p>
+		      						</NavLink>
+		      					</li>
+		      				))
+		      			}
+		      		</ul>
+		      	</div>
+			</section>
 			<footer>
 				<Foot/>
 			</footer>
 			</div>
 		)
 	}
+	componentDidMount() {
+		var _this=this;
+		$.ajax({
+			type:'get',
+			url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
+			data:{uid:10741},
+			dataType:'json',
+			success:function(data){
+//				console.log(data.data)
+				_this.setState({list:data.data.splice(4,6)})
+			}
+		})
+  	}
 }
 export default plantList;

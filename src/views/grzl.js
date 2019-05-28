@@ -27,10 +27,10 @@ class Grzl extends Component{
     render(){
         return(
             <div>
-                 <NavBar
+                <NavBar
                     style={active}
                     mode={""}
-                    icon={<Icon type="left" />}
+                    icon={<Icon type="left"/>}
                     onLeftClick={() => this.props.history.go(-1)}
                 >个人资料</NavBar>  
                 <WingBlank>  

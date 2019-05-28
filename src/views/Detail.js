@@ -1,8 +1,13 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 import $ from "jquery";
-import { Icon, Grid } from 'antd-mobile';
+import { Icon, Grid ,Toast, WhiteSpace, WingBlank, Button} from 'antd-mobile';
 import detail from "../css/Detail.module.css";
+
+
+function successToast() {
+  Toast.success('添加成功', 1);
+}
 
 class Detail extends React.Component{
 	constructor(props){
@@ -29,6 +34,13 @@ class Detail extends React.Component{
 				_this.setState({product:data.data})
 			}
 		})
+		/*Toast.loading('Loading...', 30, () => {
+	      console.log('Load complete !!!');
+	    });*/
+	
+	    setTimeout(() => {
+	      Toast.hide();
+	    }, 3000);
 	}
 	render(){
 		const styleComponent={
@@ -85,6 +97,7 @@ class Detail extends React.Component{
 			dataType:'json',
 			success:function(data){
 //				console.log(data)
+				successToast()
 			}
 		})
 	}

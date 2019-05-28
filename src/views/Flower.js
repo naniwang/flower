@@ -102,7 +102,7 @@ class Flower extends React.Component{
 								<Flex.Item className={Flo.spa}><Link style={{color:"#101010"}} to="/flowerList">哀思鲜花</Link></Flex.Item>
 							</Flex> 
 							<Flex className={Flo.sp}>
-								<Flex.Item className={Flo.spa}><Link style={{color:"red"}} to="/flowerList">开业花篮</Link></Flex.Item><div style={{border:"1px solid #cecece",height:"10px"}}></div>
+								<Flex.Item className={Flo.spa}><Link style={{color:"red"}} to="/liheList">开业花篮</Link></Flex.Item><div style={{border:"1px solid #cecece",height:"10px"}}></div>
 								<Flex.Item className={Flo.spa}><Link style={{color:"#101010"}} to="/flowerList">会议鲜花</Link></Flex.Item><div style={{border:"1px solid #cecece",height:"10px"}}></div> 
 								<Flex.Item className={Flo.spa}><Link style={{color:"#101010"}} to="/flowerList">礼仪鲜花</Link></Flex.Item>
 							</Flex>   
@@ -223,11 +223,11 @@ class Flower extends React.Component{
 			 
 							<Flex className={Flo.sp}>
 								<Flex.Item className={Flo.spa}><Link style={{color:"#101010"}} to="/flowerList">传情花束</Link></Flex.Item><div style={{border:"1px solid #cecece",height:"10px"}}></div>
-								<Flex.Item className={Flo.spa}><Link style={{color:"#101010"}} to="/flowerList">鲜花礼盒</Link></Flex.Item><div style={{border:"1px solid #cecece",height:"10px"}}></div>
-								<Flex.Item className={Flo.spa}><Link style={{color:"#101010"}} to="/flowerList">瓶插画</Link></Flex.Item>
+								<Flex.Item className={Flo.spa}><Link style={{color:"#101010"}} to="/liheList">鲜花礼盒</Link></Flex.Item><div style={{border:"1px solid #cecece",height:"10px"}}></div>
+								<Flex.Item className={Flo.spa}><Link style={{color:"#101010"}} to="/yshList">瓶插画</Link></Flex.Item>
 							</Flex> 
 							<Flex className={Flo.sp} style={{border:"1px solid #cecece",marginBottom:"10px"}}>
-								<Flex.Item className={Flo.spa}><Link style={{color:"#101010"}} to="/flowerList">鲜花礼篮</Link></Flex.Item> 
+								<Flex.Item className={Flo.spa}><Link style={{color:"#101010"}} to="/liheList">鲜花礼篮</Link></Flex.Item> 
 								<Flex.Item></Flex.Item>
 								<Flex.Item ></Flex.Item>
 							</Flex> 
@@ -239,7 +239,7 @@ class Flower extends React.Component{
 								</Flex.Item>
 							</Flex>
 							<Flex className={Flo.sp} style={{border:"1px solid #cecece",marginBottom:"10px"}}>
-								<Flex.Item className={Flo.spa}><Link style={{color:"#101010"}} to="/flowerList">开业花篮</Link></Flex.Item><div style={{border:"1px solid #cecece",height:"10px"}}></div>
+								<Flex.Item className={Flo.spa}><Link style={{color:"#101010"}} to="/liheList">开业花篮</Link></Flex.Item><div style={{border:"1px solid #cecece",height:"10px"}}></div>
 								<Flex.Item className={Flo.spa}><Link style={{color:"#101010"}} to="/flowerList">会议鲜花</Link></Flex.Item><div style={{border:"1px solid #cecece",height:"10px"}}></div>
 								<Flex.Item className={Flo.spa}><Link style={{color:"#101010"}} to="/flowerList">礼仪鲜花</Link></Flex.Item>
 							</Flex>
@@ -250,8 +250,8 @@ class Flower extends React.Component{
 								</Flex.Item>
 							</Flex>
 							<Flex className={Flo.sp} style={{border:"1px solid #cecece",marginBottom:"10px"}}>
-								<Flex.Item className={Flo.spa}><Link style={{color:"#101010"}} to="/flowerList">绿色植物</Link></Flex.Item><div style={{border:"1px solid #cecece",height:"10px"}}></div>
-								<Flex.Item className={Flo.spa}><Link style={{color:"#101010"}} to="/flowerList">盆栽花卉</Link></Flex.Item> 
+								<Flex.Item className={Flo.spa}><Link style={{color:"#101010"}} to="/plantList">绿色植物</Link></Flex.Item><div style={{border:"1px solid #cecece",height:"10px"}}></div>
+								<Flex.Item className={Flo.spa}><Link style={{color:"#101010"}} to="/plantList">盆栽花卉</Link></Flex.Item> 
 								<Flex.Item className={Flo.spa}></Flex.Item>
 							</Flex>
 					</WingBlank>
